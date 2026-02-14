@@ -3,7 +3,14 @@ name = "comfyui-wd14-tagger"
 description = "A ComfyUI extension allowing the interrogation of booru tags from images."
 version = "1.0.1"
 license = { file = "LICENSE" }
-dependencies = ["onnxruntime"]
+dependencies = [
+    "onnxruntime",
+    "onnx",
+    "huggingface_hub>=0.20.0",
+    "timm>=0.9.0",
+    "torch",
+    "torchvision",
+]
 
 [project.urls]
 Repository = "https://github.com/pythongosssss/ComfyUI-WD14-Tagger"

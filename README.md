@@ -28,6 +28,16 @@ Supports tagging and outputting multiple batched inputs.
 - **character_threshold**: The score for the character tag to be considered valid
 - **exclude_tags** A comma separated list of tags that should not be included in the results
 
+### Booru Tagger (multi-model)
+This fork also adds `image -> booru tagger` with:
+- multi-model tagging in the same node (`wd14`, `camie`, `pixai`)
+- automatic model download when files are missing
+- per-model thresholds and separators
+- batch processing and list string output
+- image passthrough output for better graph organization
+
+For PixAI (`pixai-labs/pixai-tagger-v0.9`), provide `hf_token` if your Hugging Face access requires authentication.
+
 Quick interrogation of images is also available on any node that is displaying an image, e.g. a `LoadImage`, `SaveImage`, `PreviewImage` node.  
 Simply right click on the node (or if displaying multiple images, on the image you want to interrogate) and select `WD14 Tagger` from the menu  
 ![image](https://github.com/pythongosssss/ComfyUI-WD14-Tagger/assets/125205205/11733899-6163-49f6-a22b-8dd86d910de6)
